@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a samll case using flex</title>
+    <style>
+        * {
+            font-family: Arial;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-image: url(./images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .page-header {
+            height: 70px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .page-header img{
+            width: auto;
+            height: 60px;
+        }
+        .header-nav {
+            display: flex;
+        }
+        .header-nav li a {
+            color: white;
+            font-size: 20px;
+            border: 1px solid white;
+            border-radius: 8px;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        .header-nav li:last-child a {
+            margin-right: 0;
+        }
+        
+        .page-content {
+            display: flex;
+            height: calc(100vh - 70px);
+        }
+        .content-nav {
+            width: 1000px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .content-nav .item {
+            width: 180px;
+            height: 200px;
+            background-color: orange;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;  
+            transition: 0.2s linear;
+            cursor: pointer;
+        }
+
+        .content-nav .item:hover {
+            box-shadow: 0px 0px 20px black;
+        }
+
+        .content-nav .item span {
+            font-size: 20px; 
+            color: white;
+        }
+
+        .content-nav .item:nth-child(1){
+            background-color: #595Cab;
+        }
+
+        .content-nav .item:nth-child(2){
+            background-color: #ff9d2e;
+        }
+
+        .content-nav .item:nth-child(3){
+            background-color: #01a6de;
+        }
+
+        .content-nav .item:nth-child(4){
+            background-color: #015e91;
+        }
+
+        .content-nav .item:nth-child(5){
+            background-color: #1dc128;
+        }
+
+    </style>
+</head>
+<body>
+    <!--header-->
+    <header class="page-header">
+        <a href="#">
+            <img src="./images/logo.png" alt="logo">
+        </a>
+        <ul class="header-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+
+    </header>
+    <!--content-->
+    <div class="page-content">
+       <div class="content-nav">
+             <div class="item">
+                <img src="./images/at.png" alt="">
+                <span>My Email</span>
+             </div>
+             <div class="item">
+                <img src="./images/clou.png" alt="">
+                <span>Cloud Service</span>
+             </div>
+             <div class="item">
+                <img src="./images/mobi.png" alt="">
+                <span>My Mobile</span>
+             </div>
+             <div class="item">
+                <img src="./images/yout.png" alt="">
+                <span>Youtube</span>
+             </div>
+             <div class="item">
+                <img src="./images/kefu.png" alt="">
+                <span>Online Service</span>
+             </div>
+             
+       </div>
+    </div>
+    
+</body>
+</html>
